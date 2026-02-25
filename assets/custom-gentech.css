@@ -1,0 +1,363 @@
+/* ==========================================================================
+   Gentech Minimal Aesthetic — Custom Overrides for Dawn Theme
+   ========================================================================== */
+
+/* ---------- Typography ---------- */
+
+:root {
+  --gentech-accent: #CAFF04;
+  --gentech-dark: #121212;
+  --gentech-gray: #999999;
+  --gentech-light-gray: #F5F5F5;
+}
+
+body,
+.body,
+.text-body {
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5, .hxl {
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.hxl {
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.h0 {
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.h1 {
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.h2 {
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  border-bottom: none;
+}
+
+.header-wrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header__heading-link .h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.6rem;
+}
+
+/* Pill-shaped nav menu items */
+.header__inline-menu .list-menu--inline {
+  gap: 0.6rem;
+}
+
+.header__inline-menu .list-menu__item--link,
+.header__inline-menu .header__menu-item {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  line-height: 1.4;
+}
+
+.header__inline-menu .list-menu__item--link:hover,
+.header__inline-menu .header__menu-item:hover {
+  background-color: var(--gentech-light-gray);
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.header__inline-menu summary.list-menu__item {
+  padding-right: 1.6rem;
+}
+
+.header__inline-menu .list-menu__item .icon-caret {
+  margin-left: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+/* Header icons */
+.header__icon {
+  transition: opacity 0.2s ease;
+}
+
+.header__icon:hover {
+  opacity: 0.7;
+}
+
+/* Search and Cart header icon pill style */
+.header__icon--search.header__icon--summary {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.header__icon--cart {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Cart badge accent */
+.cart-count-bubble {
+  background-color: var(--gentech-accent);
+  color: var(--gentech-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  border-radius: 40px;
+}
+
+.button--secondary {
+  border-radius: 40px;
+}
+
+.button--primary:hover {
+  opacity: 0.85;
+}
+
+.button--secondary:hover {
+  background-color: var(--gentech-light-gray);
+}
+
+/* ---------- Links ---------- */
+
+a:not(.button) {
+  transition: opacity 0.2s ease;
+}
+
+.link--text:hover {
+  opacity: 0.7;
+}
+
+/* ---------- Sections ---------- */
+
+.section-rich-text {
+  padding-top: 0;
+}
+
+.rich-text.content-container {
+  border: none;
+  box-shadow: none;
+}
+
+/* Hero section large text styling */
+.rich-text__heading.hxl {
+  font-size: calc(var(--font-heading-scale) * 5.5rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.rich-text__heading.hxl em,
+.rich-text__heading.hxl i {
+  font-style: normal;
+  color: var(--gentech-gray);
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text__heading.hxl {
+    font-size: calc(var(--font-heading-scale) * 8rem);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .rich-text__heading.hxl {
+    font-size: calc(var(--font-heading-scale) * 10rem);
+  }
+}
+
+/* Multicolumn section clean styling */
+.multicolumn .content-container {
+  border: none;
+  box-shadow: none;
+}
+
+.multicolumn-card__info h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.multicolumn-card__info .rte {
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+/* Featured product section */
+.featured-product .caption-with-letter-spacing {
+  letter-spacing: 0.15em;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Image with text clean layout */
+.image-with-text__content {
+  border: none;
+  box-shadow: none;
+}
+
+.image-with-text__text.rte strong {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  display: block;
+}
+
+.image-with-text__text--caption {
+  letter-spacing: 0.15em;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  border: none;
+}
+
+.card__content {
+  border: none;
+}
+
+.card-information__text {
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Announcement bar ---------- */
+
+.announcement-bar {
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* ---------- Scroll-to-top (if present) ---------- */
+
+.scroll-to-top,
+[data-scroll-top] {
+  background-color: var(--gentech-accent);
+  color: var(--gentech-dark);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Dropdown menus ---------- */
+
+.header__submenu.list-menu--disclosure {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.header__submenu .header__menu-item {
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.3rem;
+}
+
+.header__submenu .header__menu-item:hover {
+  background-color: var(--gentech-light-gray);
+}
+
+/* ---------- Product grid ---------- */
+
+.product-grid .grid__item {
+  padding: 0;
+}
+
+.card-wrapper {
+  border-radius: 0;
+}
+
+/* ---------- Subtle animation refinements ---------- */
+
+.scroll-trigger.animate--slide-in {
+  --animation-slide-in: slideIn 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* ---------- Global cleanup ---------- */
+
+.content-container--full-width {
+  border: none;
+}
+
+.title-wrapper-with-link {
+  margin-bottom: 3rem;
+}
+
+.title-wrapper-with-link .title {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.caption-with-letter-spacing {
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+/* Ensure consistent body text color */
+body {
+  color: rgba(var(--color-foreground), 0.8);
+}
+
+/* Clean separator lines */
+.header-wrapper--border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
